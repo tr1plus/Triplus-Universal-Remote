@@ -1,0 +1,1298 @@
+[
+    {
+        "id": "9cbc1e23.09e48",
+        "type": "tab",
+        "label": "Broadlink rm-mini",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "dbe55a26.1df3b8",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push TV Sources",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{\"host\":\"192.168.1.128\",\"packet\":\"JgBYAFIdDxwPDhEMERoeDhEMEQwQDREMEQwQDRANEA0QDR4NEA0RGg4PEgsRAAqgWBsQGw4PEQwRGh0PEA0QDRANEA0QDRANEA0QDRANHg0QDRAcDQ8RDBEADQU=\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1030,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "62009033.1f8d5",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push TV Power",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{\"host\":\"192.168.1.128\",\"packet\":\"JgAqAFMcDx0ODxANLCoPDhEMEQ0QDBEMEA0QDRANEA0QDQ8OHw0QGxANEAANBQAAAAAAAAAAAAAAAAAA\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1020,
+        "y": 20,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aa9b75c.62c1988",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push TV Volume Up",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{\"host\":\"192.168.1.128\",\"packet\":\"JgBUAFMdEBsODw4PKywPDhANDg8ODxANDg8ODg8OEQwPDh4cEA0QDQ4PDwAKo1YcDh0QDRANLCwODhANDg8PDg4PEA0ODw8OEAwPDh0dDg8PDhANDgANBQAAAAA=\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1040,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "cdbb2e79.d34ec",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push TV Volume Down",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgBAAVkaExkRDBEMLigSCxEMEgsRDBEMEQwSCxEMEQwRDCAaEQwRDB8ACrBVHREaEQwRDC4pEQwRDBEMEQwRDBELEgsUCREMEgsgGhEMEQwgAAqtWRsRGhANEQwuKQ4PEA0RDBEMEQwRDBEMEQsSCxEMIBoRDBEMHwAKr1YdEBsQDRANLikQDREMEQwRDBANEQwRDBEMEQwRCyAaEgsSCx8ACq9XHBAbEA0QDS4pEQwQDREMEA0RDBANEA0RDBEMEQweHBELEgsfAAqvWRoOHRILEQwuKQ8OEA0RDBEMEQwRDBEMEQwRDBANHxsQDRANHwAKr1gaEBwRDBEMLigPDhANEQwRDBEMEQwRDBEMEQwRDB8bDg8RDB8ACq5ZGhAcEQwQDS4oEgsSCxEMEA0RDBEMEQwRDBANEQwgGhANEQwfAA0FAAAAAAAAAAA=\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1040,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "288f951b.a4404a",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push TV up",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgAqAFYaERsQDRANEBsfDRANEA0PDRANEA0QDRANEA0gGSANEBsQDRANEAANBQAAAAAAAAAAAAAAAAAA\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1030,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ba74969.6a0a46",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push TV down",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgAmAFYbERoQDRANLigQDhANEA0QDRANEA0QDRANHxogDBAbEA0gAA0FAAA=\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1040,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e52d7abd.be1f78",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push TV Ok",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgAqAFcaDx0QDRANEBsgCw8PEAwODw4PDw8QDQ0PDw8fGiALDg8OHREMDgANBQAAAAAAAAAAAAAAAAAA\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1030,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2366de46.3af9f2",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Digibox Power",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{\"host\":\"192.168.1.128\",\"packet\":\"JgBUAAYKCRUKChQVCgsVExUUCgsKChQVFAsKFAoACz0JCgoUCgsUFQkLFRQVFAkLCgsUFBUKChUJAAs7DAkKFAoLFRQKChUUFRQKCgoLFRQUCwkVCgANBQAAAAA=\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1020,
+        "y": 640,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "93cba339.5b678",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Digibox channel up",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgA0AAYKChQKCxUTCgsVFBQUCgsVFBUUFBQKAAs7CgoKFAoLFhMJCxYTFhMKChQVFhMWEwkADQUAAAAA\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1030,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9ae7df9.69ca82",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Digibox channel down",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgA0AAgHDhIKCxQVCQsUFRQVCQsUFRQLCxMUAAtGCwcMFAoKFBULCRQVFBULCRQVFAsLExUADQUAAAAA\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1040,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7507fce2.955f74",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Digibox Menu",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgA4AAYLChQKChQVCgsUFBQVCgsUFQkLCgoKCxQAC0YICwoUCgsUFQkLFBUUFQkLFBUKCgoLCgoUAA0F\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1010,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "99ef6aae.d11a88",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Digibox arrow up",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgA4AAgIChUKChYTCwkWExYTDAgWExYJCgsKFAoACzwKCAwTCgsVFAsIFxMVFAsIFxMVCQsKDBMJAA0F\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1020,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9743efdd.4cee7",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Digibox arrow down",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgA0AAgIDRIMCBYUCwgXExQVCwgXCAsUFhMWAAtECQoKFQkLFBUKChQVFBUKChQLChUUFRMADQUAAAAA\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1030,
+        "y": 840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "25f94cff.e49454",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Digibox arrow left",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgA4AAgHCxUJCxUUCgoVFBYTCgoWCQoVCQsKCxUAC0UJCgoUCgsVEwoLFhMVEwoLFggLFAoLCQsWAA0F\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1020,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "747f8206.ef860c",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Digibox arrow right",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgA4AAcJChUJCxUUCgoVFBUUCgsUCgoVCgoVFAoACzwJCgoUCgsUFAoLFRQUFAoLFAsKFAoLFBQKAA0F\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1030,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "88a6f7a6.45b4c8",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Digibox Ok",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgA2AB0TCwgXEwwHFxMWEwwHFwkMExUJCxQMAAs4DAcNEwsJFRQLCRUUFBULCRUIDhMVBw4TCgANBQAA\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1000,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53ffbbfc.e74d44",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Digibox back",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{ \"host\": \"192.168.1.128\", \"packet\": \"JgA4AAcKChUJCxQVCQsUFRQVCgoUCwoLCgoKFBQAC0cICwoUCgoUFQoLGBEUFAoLFAsKCgoLCRUUAA0F\" }",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1010,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba3a61db.27b91",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Kodi power",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{\"host\":\"192.168.1.128\",\"packet\":\"JgBQAAABIpMTEhMSEzYUERMSFBETEhU1EzYUERQREzcTNhQ2EzcTEhMSFTQUERUQFDYTEhMSExITNhQRFDYUNhMSEzYUNhM2FAAFLQABJkkUAA0FAAAAAAAAAAA=\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1010,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "512d335f.89648c",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Kodi up",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{\"host\":\"192.168.1.128\",\"packet\":\"JgBQAAABI5IUERQSEzYUERQRExITEhM3EzYUERQRFDYTNhQ2FDYTEhM2FBEUNhQRExITEhMSExITEhM3ExITNhQ2EzcTNhQ2EwAFLAABKEkTAA0FAAAAAAAAAAA=\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 990,
+        "y": 1300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "142ef34f.ded1cd",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Kodi down",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{\"host\":\"192.168.1.128\",\"packet\":\"JgBQAAABJJQTERMSEzYUERQRFBEVEBM3EzYUERQRFDYTNxM2FDYTEhMSFRATEhMSEhMUERMSFBETNhQ2EzcTNhQ2EzYUNhQ2EwAFLAABKUgTAA0FAAAAAAAAAAA=\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1000,
+        "y": 1340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2666762f.85463a",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Kodi left ",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{\"host\":\"192.168.1.128\",\"packet\":\"JgBIAAABJZETEhMSEzYUEhQQFBIUEBQ2EzcTEhMSEzYVNRM2FTYSEhU1FDUVNRQRExITEhUQExITEhQRExITNxQ2EjcUNRU1EwANBQ==\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1000,
+        "y": 1380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9be7e291.2219e",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Kodi right",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{\"host\":\"192.168.1.128\",\"packet\":\"JgBQAAABJJITEhMSEzcTEhMSFBETEhM2FDYTEhMSEzYUNhQ2EzYUERQ2ExIVEBM3ExIUERMSExITEhQ1FDYTEhM2FDYUNhM2FAAFLAABJ0kUAA0FAAAAAAAAAAA=\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 1000,
+        "y": 1420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "16ba81a0.ef4b8e",
+        "type": "api-call-service",
+        "z": "9cbc1e23.09e48",
+        "name": "push Kodi ok",
+        "server": "96f1149c.c2cdc8",
+        "service_domain": "broadlink",
+        "service": "send",
+        "data": "{\"host\":\"192.168.1.128\",\"packet\":\"JgBQAAABJJIUERMSFDYTEhMSEhMTEhM2FDYUERMSEzgSNhQ2EzcTEhMSExITEhM2FBEUERMSFBETNxM2FDYTEhI4EzYUNhM2FAAFLAABJ0kUAA0FAAAAAAAAAAA=\"}",
+        "mergecontext": "",
+        "output_location": "",
+        "output_location_type": "none",
+        "x": 990,
+        "y": 1460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "86b8cbb7.7e6d38",
+        "type": "server-state-changed",
+        "z": "9cbc1e23.09e48",
+        "name": "",
+        "server": "96f1149c.c2cdc8",
+        "entityidfilter": "sensor.button_pressed_2",
+        "entityidfiltertype": "exact",
+        "outputinitially": false,
+        "state_type": "str",
+        "haltifstate": "",
+        "halt_if_type": "str",
+        "halt_if_compare": "is",
+        "outputs": 1,
+        "output_only_on_state_change": true,
+        "x": 180,
+        "y": 100,
+        "wires": [
+            [
+                "6e15ad73.401e54"
+            ]
+        ]
+    },
+    {
+        "id": "6e15ad73.401e54",
+        "type": "api-render-template",
+        "z": "9cbc1e23.09e48",
+        "name": "clr & act",
+        "server": "96f1149c.c2cdc8",
+        "template": "{{ states('sensor.button_pressed_2') }}-{{  states('sensor.led_color') }}",
+        "resultsLocation": "payload",
+        "resultsLocationType": "msg",
+        "templateLocation": "template",
+        "templateLocationType": "msg",
+        "x": 420,
+        "y": 100,
+        "wires": [
+            [
+                "bc0854b7.963d08"
+            ]
+        ]
+    },
+    {
+        "id": "bc0854b7.963d08",
+        "type": "switch",
+        "z": "9cbc1e23.09e48",
+        "name": "color",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "BLUE",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "RED",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "GREEN",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 550,
+        "y": 100,
+        "wires": [
+            [
+                "3ca31750.39e668"
+            ],
+            [
+                "b44b75f7.b37968"
+            ],
+            [
+                "299a3552.b9054a"
+            ]
+        ]
+    },
+    {
+        "id": "3ca31750.39e668",
+        "type": "switch",
+        "z": "9cbc1e23.09e48",
+        "name": "IF BLUE",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "power",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "input",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "arrow_back",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "pause",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "play",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "arrow_forward",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "cc",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "record",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "stop",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "info",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "exit",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "back",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "menu",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "guide",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "up",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "down",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "left",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "right",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "vol_up",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "vol_down",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "center",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "mute",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "return",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ch_up",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ch_down",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "7",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "8",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "9",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "wide",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "-",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 38,
+        "x": 780,
+        "y": 300,
+        "wires": [
+            [
+                "62009033.1f8d5"
+            ],
+            [
+                "dbe55a26.1df3b8"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                "288f951b.a4404a"
+            ],
+            [
+                "2ba74969.6a0a46"
+            ],
+            [],
+            [],
+            [
+                "e52d7abd.be1f78"
+            ],
+            [
+                "aa9b75c.62c1988"
+            ],
+            [
+                "cdbb2e79.d34ec"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "b44b75f7.b37968",
+        "type": "switch",
+        "z": "9cbc1e23.09e48",
+        "name": "IF RED",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "power",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "input",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "arrow_back",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "pause",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "play",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "arrow_forward",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "cc",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "record",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "stop",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "info",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "exit",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "back",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "menu",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "guide",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "up",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "down",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "left",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "right",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "vol_up",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "vol_down",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "center",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "mute",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "return",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ch_up",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ch_down",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "7",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "8",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "9",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "wide",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "-",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 38,
+        "x": 780,
+        "y": 900,
+        "wires": [
+            [
+                "2366de46.3af9f2"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                "53ffbbfc.e74d44"
+            ],
+            [
+                "7507fce2.955f74"
+            ],
+            [],
+            [
+                "99ef6aae.d11a88"
+            ],
+            [
+                "9743efdd.4cee7"
+            ],
+            [
+                "25f94cff.e49454"
+            ],
+            [
+                "747f8206.ef860c"
+            ],
+            [
+                "88a6f7a6.45b4c8"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                "93cba339.5b678"
+            ],
+            [
+                "9ae7df9.69ca82"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "299a3552.b9054a",
+        "type": "switch",
+        "z": "9cbc1e23.09e48",
+        "name": "IF GREEN",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "power",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "input",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "arrow_back",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "pause",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "play",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "arrow_forward",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "cc",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "record",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "stop",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "info",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "exit",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "back",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "menu",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "guide",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "up",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "down",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "left",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "right",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ok",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "vol_up",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "vol_down",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "center",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "mute",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "return",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ch_up",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "ch_down",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "1",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "2",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "3",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "4",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "5",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "6",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "7",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "8",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "9",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "wide",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "0",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "-",
+                "vt": "str"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 38,
+        "x": 790,
+        "y": 1500,
+        "wires": [
+            [
+                "ba3a61db.27b91"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [
+                "512d335f.89648c"
+            ],
+            [
+                "142ef34f.ded1cd"
+            ],
+            [
+                "2666762f.85463a"
+            ],
+            [
+                "9be7e291.2219e"
+            ],
+            [
+                "16ba81a0.ef4b8e"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "96f1149c.c2cdc8",
+        "type": "server",
+        "z": "",
+        "name": "Home Assistant",
+        "legacy": false,
+        "hassio": false,
+        "rejectUnauthorizedCerts": true,
+        "ha_boolean": "y|yes|true|on|home|open",
+        "connectionDelay": true
+    }
+]

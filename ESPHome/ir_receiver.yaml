@@ -1,0 +1,735 @@
+esphome:
+  name: ir_receiver
+  platform: ESP8266
+  board: nodemcuv2
+  on_boot:
+    then:
+      - light.turn_off: rgbLed
+      - text_sensor.template.publish:
+          id: ledColorText
+          state: "OFF"
+
+wifi:
+  ssid: !secret wifi_ssid2
+  password: !secret wifi_pw2
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: !secret api_pw
+
+ota:
+  password: !secret ota_pw
+  
+#mqtt:
+  #broker: 192.168.1.105
+  
+remote_receiver:
+  pin: 
+    number: D1
+    inverted: True
+    mode: INPUT_PULLUP
+  dump: nec
+  
+light:
+  - platform: rgb
+    name: "Universal Receiver Light"
+    id: rgbLed
+    red: output_red
+    green: output_green
+    blue: output_blue
+
+text_sensor:
+  - platform: template
+    name: "Led Color"
+    id: ledColorText
+  - platform: template
+    name: "Button Pressed"
+    id: btnPressedText
+
+output:
+  - platform: esp8266_pwm
+    id: output_red
+    pin: D5
+    inverted: True
+  - platform: esp8266_pwm
+    id: output_green
+    pin: D6
+    inverted: True
+  - platform: esp8266_pwm
+    id: output_blue
+    pin: D7
+    inverted: True
+  
+binary_sensor:
+  - platform: remote_receiver
+    name: "VIZIO button - Power"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x10EF
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "power"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - Input"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xF40B
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "input"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - Arrow Back"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xAC53
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "arrow_back"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - Pause"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xEC13
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "pause"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - Play"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xCC33
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "play"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - Arrow Forward"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x6C93
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "arrow_forward"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - cc"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x9C63
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "cc"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - record"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x2CD3
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "record"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - stop"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x0CF3
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "stop"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - info"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xD827
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "info"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - exit"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x926D
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "exit"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - Back"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x52AD
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "back"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - menu"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xC23D
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "menu"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - guide"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x38C7
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "guide"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - up"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xA25D
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "up"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - down"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x629D
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "down"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - left"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xE21D
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "left"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - right"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x12ED
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "right"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - ok"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x22DD
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "ok"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - Vol up"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x40BF
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "vol_up"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - Vol down"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xC03F
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "vol_down"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - CENTER"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xB44B
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "center"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - Mute"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x906F
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "mute"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - Return"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x58A7
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "return"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - CH up"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x00FF
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "ch_up"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - CH down"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x807F
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "ch_down"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - 1"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x8877
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "1"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - 2"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x48B7
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "2"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - 3"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xC837
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "3"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - 4"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x28D7
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "4"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - 5"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xA857
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "5"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - 6"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x6897
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "6"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - 7"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xE817
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "7"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - 8"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x18E7
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "8"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - 9"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x9867
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "9"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - WIDE"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xEE11
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "wide"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - 0"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0x08F7
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "0"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+  - platform: remote_receiver
+    name: "VIZIO button - -"
+    internal: true
+    nec:
+      address: 0x20DF
+      command: 0xFF00
+    on_press:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "-"
+    on_release:
+      then:
+        - text_sensor.template.publish:
+            id: btnPressedText
+            state: "off"
+      
+#RGB LED
+  - platform: remote_receiver
+    name: "VIZIO button - Yellow"
+    nec:
+      address: 0x20DF
+      command: 0x4AB5
+    on_press:
+      then:
+        - light.turn_off: rgbLed
+        - text_sensor.template.publish:
+            id: ledColorText
+            state: "OFF"
+  - platform: remote_receiver
+    name: "VIZIO button - Blue"
+    nec:
+      address: 0x20DF
+      command: 0xCA35
+    on_press:
+      then:
+        - light.turn_on: 
+            id: rgbLed
+            brightness: 1.0
+            red: 0
+            green: 0
+            blue: 1.0
+        - text_sensor.template.publish:
+            id: ledColorText
+            state: "BLUE"
+  - platform: remote_receiver
+    name: "VIZIO button - Red"
+    nec:
+      address: 0x20DF
+      command: 0x2AD5
+    on_press:
+      then:
+        - light.turn_on: 
+            id: rgbLed
+            brightness: 1.0
+            red: 1.0
+            green: 0
+            blue: 0
+        - text_sensor.template.publish:
+            id: ledColorText
+            state: "RED"
+  - platform: remote_receiver
+    name: "VIZIO button - Green"
+    nec:
+      address: 0x20DF
+      command: 0xAA55
+    on_press:
+      then:
+        - light.turn_on: 
+            id: rgbLed
+            brightness: 1.0
+            red: 0
+            green: 1.0
+            blue: 0
+        - text_sensor.template.publish:
+            id: ledColorText
+            state: "GREEN"
